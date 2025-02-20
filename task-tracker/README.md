@@ -20,10 +20,27 @@
 
 To run this project, follow these steps:
 
-```go
-go build -o task-cli // Build task-tracker app binary
+MacOS :
+```bash
+# Build task-tracker app binary
+go build -o task-cli
 
-mv task-cli /usr/local/bin/ // Move it to a system-wide location
+# Move it to a system-wide location
+mv task-cli /usr/local/bin/ 
+
+Now you can just run:
+	task-cli {action} {parameter}
+        ex: task-cli add "Programming with Go"
+```
+
+Windows :
+```shell
+# Build task-tracker executable app
+go build -o task-cli.exe 
+
+# Move it to a system-wide location (C:\Windows\System32\)
+# (Alternatively, you can add the directory containing task-cli.exe to your PATH environment variable.)
+move task-cli.exe C:\Windows\System32\
 
 Now you can just run:
 	task-cli {action} {parameter}
