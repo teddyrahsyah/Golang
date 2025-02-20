@@ -27,7 +27,7 @@ To clone and run any project, follow these steps:
 git clone https://github.com/teddyrahsyah/Golang.git
 
 # Checkout project branch
-git checkout {project-name}
+git checkout project/{project-name}
 
 # Navigate to the project directory
 cd project-name
