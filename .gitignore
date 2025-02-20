@@ -1,5 +1,5 @@
 # App JSON file
-/Golang/task-tracker/data/
+task-tracker/data/
 
 # Binaries for programs and plugins
 *.exe
