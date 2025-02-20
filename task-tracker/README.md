@@ -25,7 +25,7 @@ MacOS :
 # Build task-tracker app binary
 go build -o task-cli
 
-# Move it to a system-wide location
+# Move it to a system-wide location (use sudo mode)
 mv task-cli /usr/local/bin/ 
 
 Now you can just run:
@@ -38,7 +38,7 @@ Windows :
 # Build task-tracker executable app
 go build -o task-cli.exe 
 
-# Move it to a system-wide location (C:\Windows\System32\)
+# Move it to a system-wide location (C:\Windows\System32\ : use Run As Administrator)
 # (Alternatively, you can add the directory containing task-cli.exe to your PATH environment variable.)
 move task-cli.exe C:\Windows\System32\
 

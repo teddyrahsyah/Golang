@@ -41,6 +41,10 @@ func (s *taskService) GetAllTasks() ([]model.Task, error) {
 }
 
 func (s *taskService) GetTaskById(id int) (*model.Task, error) {
+	if id == 0 {
+		return nil, errors.New("Invalid Task ID : Please enter a number")
+	}
+
 	tasks, err := s.repo.GetById(id)
 	if err != nil {
 		return nil, err
@@ -84,6 +88,10 @@ func (s *taskService) AddTask(desc string) error {
 }
 
 func (s *taskService) UpdateTaskStatus(id int, status string) error {
+	if id == 0 {
+		return errors.New("Invalid Task ID : Please enter a number")
+	}
+
 	task, err := s.repo.GetById(id)
 	if err != nil {
 		return err
@@ -94,6 +102,10 @@ func (s *taskService) UpdateTaskStatus(id int, status string) error {
 }
 
 func (s *taskService) UpdateTaskDescription(id int, desc string) error {
+	if id == 0 {
+		return errors.New("Invalid Task ID : Please enter a number")
+	}
+
 	task, err := s.repo.GetById(id)
 	if err != nil {
 		return err
@@ -104,5 +116,9 @@ func (s *taskService) UpdateTaskDescription(id int, desc string) error {
 }
 
 func (s *taskService) DeleteTask(id int) error {
+	if id == 0 {
+		return errors.New("Invalid Task ID : Please enter a number")
+	}
+
 	return s.repo.Delete(id)
 }
